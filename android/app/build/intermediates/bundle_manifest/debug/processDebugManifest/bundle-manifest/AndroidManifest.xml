@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blacktrine.starjump.f"
+    android:versionCode="3"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <!-- INMOBI -->
+    <!--
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.READ_CALENDAR"/>
+	<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    -->
+    <!-- INMOBI -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.blacktrine.starjump.f.PTPlayer"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FACEBOOK SDK -->
+        <!--
+        <activity android:name="com.facebook.ads.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+        -->
+        <!-- FACEBOOK SDK -->
+
+
+        <!-- ADMOB -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8823371948486222~6869701190" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- ADMOB -->
+
+
+        <!-- VUNGLE -->
+        <!--
+        <activity
+             android:name="com.vungle.publisher.FullScreenAdActivity"
+             android:configChanges="keyboardHidden|orientation|screenSize"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        -->
+        <!-- VUNGLE -->
+
+
+        <!-- HEYZAP -->
+        <!--
+        <activity android:name="com.heyzap.sdk.ads.HeyzapInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.heyzap.sdk.ads.HeyzapVideoActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.heyzap.sdk.ads.HeyzapProxyActivity" />
+        <activity android:name="com.heyzap.sdk.ads.VASTActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.heyzap.sdk.ads.MediationTestActivity" />
+        <receiver android:name="com.heyzap.sdk.ads.PackageAddedReceiver">
+          <intent-filter>
+            <data android:scheme="package"/>
+            <action android:name="android.intent.action.PACKAGE_ADDED"/>
+          </intent-filter>
+        </receiver>
+        -->
+        <!-- HEYZAP -->
+
+
+        <!-- APPLOVIN SDK -->
+        <!--
+        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
+        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
+		<meta-data
+            android:name="applovin.sdk.key"
+            android:value="{{AppLovin_SDK_key}}" />
+        -->
+        <!-- APPLOVIN SDK -->
+
+
+        <!-- REVMOB -->
+        <!--
+        <activity android:name="com.revmob.FullscreenActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:configChanges="keyboardHidden|orientation">
+        </activity>
+        <meta-data android:name="com.revmob.app.id" android:value="{{RevMobMediaID}}"/>
+        -->
+        <!-- REVMOB -->
+
+
+        <!-- INMOBI -->
+        <!--
+	<activity android:name="com.inmobi.rendering.InMobiAdActivity"
+              android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+              android:theme="@android:style/Theme.Translucent.NoTitleBar"
+              android:hardwareAccelerated="true" />
+        -->
+        <!-- INMOBI -->
+
+
+        <!-- CHARTBOOST -->
+        <!--
+		<activity android:name="com.chartboost.sdk.CBImpressionActivity"
+              android:excludeFromRecents="true"
+              android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+              android:configChanges="keyboardHidden|orientation|screenSize"/>
+        -->
+        <!-- CHARTBOOST -->
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:authorities="com.blacktrine.starjump.f.mobileadsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

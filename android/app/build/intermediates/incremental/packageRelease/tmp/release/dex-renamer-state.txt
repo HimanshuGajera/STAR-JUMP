@@ -1,0 +1,4 @@
+#Sat Jun 01 15:55:11 IST 2019
+base.0=/Users/himanshugajera/Desktop/Star Jump Update/android/app/build/intermediates/dex/release/mergeDexRelease/out
+path.0=classes.dex
+renamed.0=classes.dex

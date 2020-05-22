@@ -1,0 +1,7 @@
+#Sat Jun 01 15:53:04 IST 2019
+base.0=/Users/himanshugajera/Desktop/Star Jump Update/android/app/build/intermediates/dex/debug/mergeDexDebug/out
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/himanshugajera/Desktop/Star Jump Update/android/app/build/intermediates/dex/debug/mergeDexDebug/out
